@@ -6,7 +6,7 @@ getgenv().ExploitSpecific = "📜"
 
 -- API CALLS
 
-local library = loadstring(game:HttpGet("https://cdn.statically.io/gh/wantll/aalu/main/library.lua"))()
+local library = loadstring(game:HttpGet("https://cdn.statically.io/gh/wantll/aalu/main/library1.lua"))()
 getgenv().api = loadstring(game:HttpGet("https://cdn.statically.io/gh/wantll/aalu/main/api.lua"))()
 local bssapi = loadstring(game:HttpGet("https://cdn.statically.io/gh/wantll/aalu/main/bssapi.lua"))()
 local httpreq = (syn and syn.request) or http_request or (http and http.request) or request
