@@ -664,7 +664,7 @@ end
 local Config = { WindowName = "🐝  🐝  🐝   蜂群模拟器   🐝  🐝  🐝 | "..temptable.version, Color = Color3.fromRGB(32, 137, 229), Keybind = Enum.KeyCode.F1}
 local Window = library:CreateWindow(Config, game:GetService("CoreGui"))
 
-local hometab = Window:CreateTab("Home")
+--[[local hometab = Window:CreateTab("Home")]]
 local farmtab = Window:CreateTab("Farming")
 local combtab = Window:CreateTab("Combat")
 local wayptab = Window:CreateTab("Waypoints")
@@ -672,7 +672,7 @@ local misctab = Window:CreateTab("Misc")
 local extrtab = Window:CreateTab("Extra")
 local setttab = Window:CreateTab("Settings")
 
-local information = hometab:CreateSection("Information")
+--[[local information = hometab:CreateSection("Information")
 information:CreateLabel("Thanks you for using our script, "..api.nickname)
 information:CreateLabel("Script version: "..temptable.version)
 information:CreateLabel("Place version: "..game.PlaceVersion)
@@ -684,7 +684,7 @@ information:CreateLabel("Script by wantll, .anon and a10b")
 information:CreateLabel("")
 local gainedhoneylabel = information:CreateLabel("Gained Honey: 0")
 information:CreateButton("Discord Invite", function() setclipboard("") end)
-information:CreateButton("Donation", function() setclipboard("") end)
+information:CreateButton("Donation", function() setclipboard("") end)]]
 
 
 local farmo = farmtab:CreateSection("Farming")
@@ -795,7 +795,7 @@ dispsettings:CreateToggle("Strawberry Dispenser",  nil,  function(State) androme
 dispsettings:CreateToggle("Treat Dispenser",  nil,  function(State) andromeda.dispensesettings.treat = not andromeda.dispensesettings.treat end)
 dispsettings:CreateToggle("Coconut Dispenser",  nil,  function(State) andromeda.dispensesettings.coconut = not andromeda.dispensesettings.coconut end)
 dispsettings:CreateToggle("Glue Dispenser",  nil,  function(State) andromeda.dispensesettings.glue = not andromeda.dispensesettings.glue end)
-dispsettings:CreateToggle("Mountain Top Booster",  true,  function(State) andromeda.dispensesettings.white = not andromeda.dispensesettings.white end)
+dispsettings:CreateToggle("Mountain Top Booster",  nil,  function(State) andromeda.dispensesettings.white = not andromeda.dispensesettings.white end)
 dispsettings:CreateToggle("Blue Field Booster",  nil,  function(State) andromeda.dispensesettings.blue = not andromeda.dispensesettings.blue end)
 dispsettings:CreateToggle("Red Field Booster",  nil,  function(State) andromeda.dispensesettings.red = not andromeda.dispensesettings.red end)
 local guisettings = setttab:CreateSection("GUI Settings")
