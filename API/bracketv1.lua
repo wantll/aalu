@@ -85,7 +85,7 @@ function Library:CreateWindow(Config, Parent)
 		end
 		for _,TabButton in pairs(TBContainer:GetChildren()) do
 			if TabButton:IsA("TextButton") then
-				TabButton.Size = UDim2.new(0,658 / Library.TabCount,1,0)
+				TabButton.Size = UDim2.new(0,380 / Library.TabCount,1,0)
 			end
 		end
 		for _,Pallete in pairs(Screen:GetChildren()) do
