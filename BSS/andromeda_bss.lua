@@ -661,7 +661,7 @@ function makequests()
     end end end end end
 end
 
-local Config = { WindowName = "🐝  🐝  🐝   蜂群模拟器   🐝  🐝  🐝 | "..temptable.version, Color = Color3.fromRGB(32, 137, 229), Keybind = Enum.KeyCode.F1}
+local Config = { WindowName = "🐝 🎄 🐝 🎄 🐝   蜂群模拟器   🐝 🎄 🐝 🎄 🐝 | "..temptable.version, Color = Color3.fromRGB(32, 137, 229), Keybind = Enum.KeyCode.F1}
 local Window = library:CreateWindow(Config, game:GetService("CoreGui"))
 
 --[[local hometab = Window:CreateTab("Home")]]
