@@ -1187,7 +1187,7 @@ local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function() vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)task.wait(1)vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-task.spawn(function()while task.wait() do
+--[[task.spawn(function()while task.wait() do
     if andromeda.toggles.farmsnowflakes then
         task.wait(3)
         for i,v in next, temptable.tokenpath:GetChildren() do
@@ -1197,7 +1197,25 @@ task.spawn(function()while task.wait() do
             end
         end
     end
-end end)
+end end)]]
+
+local canTeleport = true
+game:GetService("Workspace").Particles.Snowflakes.ChildAdded:Connect(function(snowflake)
+    if canTeleport == true and kocmoc.toggles.farmsnowflakes == true then
+        local hash = tostring(math.random(1,10000))
+        snowflake.Name = hash
+        canTeleport = false
+        repeat
+           wait()
+           getgenv().temptable.float = true
+           game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = snowflake.CFrame + Vector3.new(0,7.5,0)
+        until game:GetService("Workspace").Particles.Snowflakes:FindFirstChild(hash) == nil
+        getgenv().temptable.float = false
+        wait(1)
+        canTeleport = true
+    end
+end)
+
 
 game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
     humanoid = char:WaitForChild("Humanoid")
